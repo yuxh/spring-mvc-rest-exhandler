@@ -153,7 +153,7 @@ public class RestExceptionHandler extends AbstractHandlerExceptionResolver imple
     @SuppressWarnings("unchecked")
     private void ensureMessageConverters() {
 
-        List<HttpMessageConverter<?>> converters = new ArrayList<HttpMessageConverter<?>>();
+        List<HttpMessageConverter<?>> converters = new ArrayList<>();
 
         //user configured values take precedence:
         if (this.messageConverters != null && this.messageConverters.length > 0) {

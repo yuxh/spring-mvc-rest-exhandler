@@ -104,7 +104,7 @@ public class DefaultRestErrorResolver implements RestErrorResolver, MessageSourc
 
     protected final Map<String,String> createDefaultExceptionMappingDefinitions() {
 
-        Map<String,String> m = new LinkedHashMap<String, String>();
+        Map<String,String> m = new LinkedHashMap<>();
 
         // 400
         applyDef(m, HttpMessageNotReadableException.class, HttpStatus.BAD_REQUEST);
@@ -292,7 +292,7 @@ public class DefaultRestErrorResolver implements RestErrorResolver, MessageSourc
             return Collections.emptyMap();
         }
 
-        Map<String, RestError> map = new LinkedHashMap<String, RestError>(smap.size());
+        Map<String, RestError> map = new LinkedHashMap<>(smap.size());
 
         for (Map.Entry<String, String> entry : smap.entrySet()) {
             String key = entry.getKey();
